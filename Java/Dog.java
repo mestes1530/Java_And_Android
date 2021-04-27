@@ -10,13 +10,24 @@ public class Dog {
 	public static void Shake() {
 		println("Dog shakes paw...");
 	}
-	static void Sit() {
+	public static void Sit() {
 		println("Dog sat down...");
 	}
-	static void LayDown() {
+	public static void LayDown() {
 		println("Dog lays down...");
 	}
-}
 
-// Makes an Instance of the Dog Object
-Dog dogInstance = New("Hound", "Brown", "2 Feet", "60 Pounds") 
+	// Constructor that allows the user to create object instances
+	public Dog(String breedInput, String colorInput, String heightInput, String weightInput) {
+		Breed = breedInput;
+		Color = colorInput;
+		Height = heightInput;
+		Weight = weightInput;
+	}
+
+	// Main function that creates a specific Dog instance
+	public static void main(String[] args) {
+		Dog dogInstance = New Dog("Hound", "Brown", "2 Feet", "60 Pounds");
+	}
+
+}
